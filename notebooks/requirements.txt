@@ -1,0 +1,7 @@
+pandas~=2.1.4
+requests~=2.31.0
+python-dotenv~=1.0.0
+tqdm~=4.66.5
+pathlib~=1.0.1
+pydantic~=2.10.6
+groq~=0.17.0
