@@ -183,9 +183,13 @@ elif page == "🔗 Corrélations":
     signal_choice = st.selectbox("Signal textuel", text_signals)
 
     fig_scatter = px.scatter(df_crypto, x=signal_choice, y=target,
-                              color='fear_greed_index', color_continuous_scale='coolwarm',
-                              opacity=0.6, trendline='ols',
-                              hover_data=['timestamp'])
+                            color='fear_greed_index', 
+                            color_continuous_scale='RdYlGn', 
+                            opacity=0.6, 
+                            trendline='ols',
+                            hover_data=['timestamp'],
+                            labels={'fear_greed_index': 'Fear & Greed Index'},
+                            range_color=[0, 100])
     fig_scatter.update_layout(height=400)
     st.plotly_chart(fig_scatter, use_container_width=True)
 
