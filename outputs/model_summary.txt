@@ -1,0 +1,64 @@
+================================================================================
+RÉSUMÉ DES MODÈLES DE PRÉDICTION DE VOLATILITÉ
+================================================================================
+
+Date de création: 2026-03-07 02:38:01.257933
+Seuil de volatilité: ±6.0%
+Taille du dataset: 2063 observations
+Nombre de features: 10
+
+Features utilisées:
+   1. social_sentiment_score
+   2. news_sentiment_score
+   3. news_impact_score
+   4. social_mentions_count
+   5. fear_greed_index
+   6. rsi_technical_indicator
+   7. trading_volume_24h
+   8. sentiment_composite
+   9. sentiment_divergence
+  10. volume_normalized
+
+================================================================================
+PERFORMANCES GLOBALES DES MODÈLES
+================================================================================
+
+Random Forest:
+  - ROC-AUC (test): 0.4811
+  - CV ROC-AUC: 0.5051 (+/- 0.0241)
+
+XGBoost:
+  - ROC-AUC (test): 0.4876
+  - CV ROC-AUC: 0.5171 (+/- 0.0257)
+
+Meilleur modèle: XGBoost
+
+================================================================================
+PERFORMANCES PAR CRYPTOMONNAIE
+================================================================================
+
+Nombre de cryptomonnaies évaluées: 10
+
+Statistiques agrégées:
+  - Accuracy moyenne: 0.470 (±0.075)
+  - Precision moyenne: 0.448 (±0.074)
+  - Recall moyenne: 0.463 (±0.107)
+  - F1-Score moyenne: 0.449 (±0.078)
+  - ROC-AUC moyenne: 0.490 (±0.083)
+
+Meilleure crypto: Ethereum (F1: 0.564)
+Pire crypto: Polkadot (F1: 0.324)
+
+================================================================================
+FICHIERS GÉNÉRÉS
+================================================================================
+
+Modèles:
+  - random_forest_volatility.pkl
+  - xgboost_volatility.pkl
+  - scaler_volatility.pkl
+
+Données et métriques:
+  - feature_names.txt
+  - crypto_performance.csv
+  - per_crypto_performance.png

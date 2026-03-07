@@ -1,0 +1,10 @@
+social_sentiment_score
+news_sentiment_score
+news_impact_score
+social_mentions_count
+fear_greed_index
+rsi_technical_indicator
+trading_volume_24h
+sentiment_composite
+sentiment_divergence
+volume_normalized
